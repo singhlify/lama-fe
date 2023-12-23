@@ -9,7 +9,7 @@ import * as z from "zod";
 import { useState } from "react";
 import Link from "next/link";
 
-const tableHeader = ["S.No.",   , "Upload Date & Time", "Actions"];
+const tableHeader = ["S.No.", , "Upload Date & Time", "Actions"];
 const defaultFileValues = {
   fileName: "",
   fileDescription: "",
@@ -184,8 +184,8 @@ export default function FilesPage({ params: { projectId = "" } }) {
         <table className="table table-zebra table-pin-rows">
           <thead>
             <tr>
-              {tableHeader.map((header) => (
-                <th>{header}</th>
+              {tableHeader.map((header, index) => (
+                <th key={index}>{header}</th>
               ))}
             </tr>
           </thead>
