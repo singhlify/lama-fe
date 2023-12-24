@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# LAMA Podcast
+
+LAMA Podcast is a front-end application built with Next.js and Tailwind CSS. In this demo project, the user can login via their email and create multiple projects.
+Then, in those projects, the user can add multiple files and keep updating the description of those files as per need or even delete them. They can also edit the project widget configurations and in them they can also upload a custom Bot Image. Finally, the user can also edit their name in Account Settings.
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+Ensure you have Node.js and `pnpm` installed on your machine.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Installation
+1. Clone the repository: `git clone <repository-url>`
+2. Change into the project directory: `cd lama-fe`
+3. Install dependencies: `pnpm install`
+
+### Development
+- Run the development server: `pnpm run dev`
+- Open your browser and visit [http://localhost:3000](http://localhost:3000)
+
+## Folder Structure
+
+```
+.
+├── .eslintrc.json
+├── .gitignore
+├── README.md
+├── jsconfig.json
+├── next.config.js
+├── package.json
+├── pnpm-lock.yaml
+├── postcss.config.js
+├── public/
+│   └── assets/
+│       ├── animations/
+│       ├── images/
+│       └── index.js
+├── src/
+│   ├── apis/
+│   │   └── ...  # API utility functions
+│   ├── app/
+│   │   ├── projects/
+│   │   │   ├── [projectId]/
+│   │   │   │   ├── files/
+│   │   │   │   │   ├── [fileId]/
+│   │   │   │   │   │   └── page.js
+│   │   │   │   ├── settings/
+│   │   │   │   │   └── page.js
+│   │   │   │   ├── widget/
+│   │   │   │   │   └── page.js
+│   │   │   │   ├── layout.js
+│   │   │   │   └── Sidebar.js
+│   │   │   └── page.js
+│   │   ├── favicon.ico
+│   │   ├── globals.css
+│   │   ├── layout.js
+│   │   └── page.js
+│   ├── components/
+│   ├── providers/
+│   └── utils/
+└── tailwind.config.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Scripts
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- `npm run dev`: Run the development server.
+- `npm run build`: Build the application.
+- `npm start`: Start the production server.
+- `npm run lint`: Run ESLint for code linting.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Dependencies
 
-## Learn More
+- `@hookform/resolvers`: ^3.3.2
+- `@tanstack/react-query`: ^5.14.2
+- `@tanstack/react-query-devtools`: ^5.14.5
+- `axios`: ^1.6.2
+- `lottie-react`: ^2.4.0
+- `next`: 14.0.4
+- `react`: ^18
+- `react-dom`: ^18
+- `react-hook-form`: ^7.49.2
+- `react-toastify`: ^9.1.3
+- `zod`: ^3.22.4
 
-To learn more about Next.js, take a look at the following resources:
+## Dev Dependencies
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `@tanstack/eslint-plugin-query`: ^5.12.1
+- `autoprefixer`: ^10.0.1
+- `daisyui`: ^4.4.20
+- `eslint`: ^8
+- `eslint-config-next`: 14.0.4
+- `postcss`: ^8
+- `tailwindcss`: ^3.3.0
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Linting
 
-## Deploy on Vercel
+Linting is configured using ESLint with the @tanstack/eslint-plugin-query. Run `npm run lint` to ensure code quality.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Customization
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The app is built using Next.js and Tailwind CSS. Customize styles in the `tailwind.config.js` file.
+
+## Contributing
+
+Feel free to contribute by submitting issues or pull requests.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
